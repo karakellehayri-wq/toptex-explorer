@@ -82,8 +82,9 @@ app.post("/api/proxy", async (req, res) => {
 
     const headers = {
       "Accept": "application/json",
-      "Authorization": `Bearer ${token}`,
+      "x-api-key": API_KEY
     };
+
 
     let fetchBody;
     if (!["GET", "HEAD"].includes(m) && body != null) {
