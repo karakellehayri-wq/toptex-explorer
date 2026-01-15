@@ -82,7 +82,7 @@ app.post("/api/proxy", async (req, res) => {
 
     const headers = {
       "Accept": "application/json",
-      "x-api-key": API_KEY
+      "x-api-key": 3WnBaihpTSqDe7FCgDAbaHLYsS3GqgRar7swJ2th
     };
 
 
