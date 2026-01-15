@@ -361,3 +361,5 @@ app.get("/health", (req, res) => res.send("ok"));
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log("Running on :" + port));
+
+console.log("ENV KEYS:", Object.keys(process.env).filter(k => k.includes("TOPTEX")));
