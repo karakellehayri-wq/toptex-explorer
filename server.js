@@ -92,13 +92,15 @@ app.post("/api/proxy", async (req, res) => {
       fetchBody = typeof body === "string" ? body : JSON.stringify(body);
     }
 
-    const r = await fetch(url, { method: m, headers, body: fetchBody });
-    console.log("TOPTEX URL:", url);
-    console.log("TOPTEX STATUS:", r.status, r.statusText);
-    console.log("TOPTEX RESP:", raw);
+const r = await fetch(url, { method: m, headers, body: fetchBody });
 
-    const ct = r.headers.get("content-type") || "";
-    const raw = await r.text();
+const ct = r.headers.get("content-type") || "";
+const raw = await r.text();
+
+console.log("TOPTEX URL:", url);
+console.log("TOPTEX STATUS:", r.status, r.statusText);
+console.log("TOPTEX RESP:", raw);
+
 
     const out = {
       ok: r.ok,
